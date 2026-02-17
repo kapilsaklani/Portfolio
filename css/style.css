@@ -1,0 +1,352 @@
+/* CSS Variables extracted from index.css and tailwind.config.ts */
+:root {
+    /* Base HSL values */
+    --background-hsl: 230 20% 10%;
+    --foreground-hsl: 220 15% 90%;
+    --card-hsl: 230 18% 14%;
+    --card-foreground-hsl: 220 15% 90%;
+    --popover-hsl: 230 18% 14%;
+    --popover-foreground-hsl: 220 15% 90%;
+    --primary-hsl: 265 85% 65%;
+    --primary-foreground-hsl: 0 0% 100%;
+    --secondary-hsl: 230 15% 20%;
+    --secondary-foreground-hsl: 220 15% 85%;
+    --muted-hsl: 230 12% 18%;
+    --muted-foreground-hsl: 220 10% 55%;
+    --accent-hsl: 185 70% 50%;
+    --accent-foreground-hsl: 230 20% 10%;
+    --destructive-hsl: 0 84.2% 60.2%;
+    --destructive-foreground-hsl: 210 40% 98%;
+    --border-hsl: 230 12% 22%;
+    --input-hsl: 230 12% 22%;
+    --ring-hsl: 265 85% 65%;
+    --radius: 0.75rem;
+
+    /* Derived CSS Colors */
+    --background: hsl(var(--background-hsl));
+    --foreground: hsl(var(--foreground-hsl));
+    --card: hsl(var(--card-hsl));
+    --card-foreground: hsl(var(--card-foreground-hsl));
+    --primary: hsl(var(--primary-hsl));
+    --primary-foreground: hsl(var(--primary-foreground-hsl));
+    --secondary: hsl(var(--secondary-hsl));
+    --secondary-foreground: hsl(var(--secondary-foreground-hsl));
+    --muted: hsl(var(--muted-hsl));
+    --muted-foreground: hsl(var(--muted-foreground-hsl));
+    --accent: hsl(var(--accent-hsl));
+    --accent-foreground: hsl(var(--accent-foreground-hsl));
+    --border: hsl(var(--border-hsl));
+    --input: hsl(var(--input-hsl));
+    --ring: hsl(var(--ring-hsl));
+
+    --font-display: 'JetBrains Mono', monospace;
+    --font-body: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-display);
+    color: var(--foreground);
+    letter-spacing: -0.025em;
+    /* tracking-tight */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s;
+}
+
+/* Utilities */
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.text-muted-foreground {
+    color: var(--muted-foreground) !important;
+}
+
+.text-accent {
+    color: var(--accent) !important;
+}
+
+.bg-secondary {
+    background-color: var(--secondary) !important;
+}
+
+.bg-card {
+    background-color: var(--card) !important;
+}
+
+.bg-background {
+    background-color: var(--background) !important;
+}
+
+.font-display {
+    font-family: var(--font-display) !important;
+}
+
+.font-body {
+    font-family: var(--font-body) !important;
+}
+
+/* Sections */
+section {
+    padding: 4rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+    section {
+        padding: 6rem 1.5rem;
+    }
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 0 !important;
+}
+
+.hero-content {
+    position: absolute;
+    inset: 0;
+    background-color: hsla(230, 20%, 10%, 0.6);
+    /* bg-background/60 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out forwards;
+}
+
+/* Project Cards */
+.project-card {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    /* rounded-xl */
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.project-card:hover {
+    border-color: hsla(265, 85%, 65%, 0.5);
+    /* border-primary/50 */
+    transform: translateY(-0.25rem);
+    /* -translate-y-1 */
+}
+
+.project-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.05);
+}
+
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, hsla(230, 20%, 10%, 0.95), transparent);
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: flex-end;
+}
+
+.project-info {
+    padding: 1rem;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+/* Skills Items */
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    border-color: hsla(265, 85%, 65%, 0.4);
+    transform: translateY(-0.125rem);
+    /* -translate-y-0.5 */
+}
+
+.skill-icon-box {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+}
+
+/* Skills Pills */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.skill-pill {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: hsla(230, 18%, 14%, 1);
+    /* var(--card) */
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    color: var(--foreground);
+    transition: all 0.2s ease;
+    cursor: default;
+}
+
+.skill-pill:hover {
+    border-color: var(--primary);
+    background-color: hsla(230, 18%, 18%, 1);
+    transform: translateY(-1px);
+}
+
+.skill-pill i {
+    width: 1rem;
+    height: 1rem;
+    color: var(--accent);
+}
+
+/* Certifications */
+.cert-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.cert-item:hover {
+    border-color: hsla(265, 85%, 65%, 0.4);
+    transform: translateY(-0.125rem);
+}
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Footer Text */
+.footer-text {
+    font-family: var(--font-display);
+    color: var(--muted-foreground);
+    font-size: 0.75rem;
+    /* text-xs */
+    letter-spacing: 0.05em;
+    /* tracking-wider */
+}
+
+/* Hover Links */
+.hover-link {
+    color: var(--foreground);
+    transition: color 0.2s;
+}
+
+.hover-link:hover {
+    color: var(--primary);
+}
+
+.hover-link-box {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.hover-link:hover .hover-link-box {
+    background-color: hsla(265, 85%, 65%, 0.2);
+    /* primary/20 */
+}
+
+.hover-text-primary:hover {
+    color: var(--primary) !important;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-bottom: none;
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.nav-link {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary) !important;
+}
+
+/* Adjust scroll padding for fixed navbar */
+html {
+    scroll-padding-top: 80px;
+}

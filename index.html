@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapil Saklani - Portfolio</title>
+  <meta name="description" content="Full-Stack Developer Portfolio">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <div class="container">
+      <a class="navbar-brand font-display fw-bold text-foreground" href="#"></a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav gap-3">
+          <li class="nav-item">
+            <a class="nav-link font-body text-muted-foreground hover-text-primary transition-colors"
+              href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-body text-muted-foreground hover-text-primary transition-colors"
+              href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-body text-muted-foreground hover-text-primary transition-colors"
+              href="#skills">Skills/Certifications</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="position-relative">
+      <!-- w-full h-auto object-cover -->
+      <img src="assets/hero-banner.jpg" alt="Developer workspace with dual monitors and code" class="w-100 h-auto"
+        style="object-fit: cover;">
+
+      <!-- absolute inset-0 bg-background/60 flex flex-col items-center justify-center -->
+      <div class="hero-content">
+        <!-- font-body text-sm md:text-base text-accent tracking-widest uppercase mb-2 -->
+        <p class="font-body text-accent text-uppercase mb-2" style="letter-spacing: 0.1em; font-size: 0.875rem;">
+          Full-Stack Developer
+        </p>
+        <!-- font-display text-4xl md:text-6xl lg:text-7xl text-foreground tracking-tight -->
+        <h1 class="font-display text-foreground fw-bold mb-0"
+          style="font-size: clamp(2.25rem, 5vw, 4.5rem); line-height: 1.1;">
+          Kapil Saklani
+        </h1>
+        <!-- mt-4 font-body text-muted-foreground text-base md:text-lg max-w-xl text-center px-4 -->
+        <p class="mt-4 font-body text-muted-foreground text-center px-4" style="font-size: 1.125rem; max-width: 36rem;">
+          Building modern web applications with clean code and great UX.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-5" id="about">
+    <div class="container" style="max-width: 64rem;"> <!-- max-w-5xl -->
+      <div class="d-flex flex-column flex-md-row align-items-center gap-5">
+        <!-- Avatar -->
+        <div class="flex-shrink-0">
+          <div class="overflow-hidden rounded-4 shadow-lg position-relative"
+            style="width: 16rem; height: 16rem; border: 2px solid rgba(163, 113, 247, 0.3); box-shadow: 0 10px 15px -3px rgba(163, 113, 247, 0.1);">
+            <img src="assets/avatar.jpg" alt="Kapil Saklani - Software Developer" class="w-100 h-100"
+              style="object-fit: cover; object-position:bottom;">
+          </div>
+        </div>
+
+        <!-- Text Content -->
+        <div class="flex-grow-1 animate-fade-in-up ">
+          <h2 class="font-display text-foreground mb-4" style="font-size: 2.25rem; text-align: left;">
+            About Me
+          </h2>
+          <p class="font-body text-foreground mb-4" style="font-size: 1.125rem; line-height: 1.75;">
+            Hi, I'm a Computer Science student with a strong foundation in data structures, algorithms, and full-stack
+            web development, and I enjoy building practical, real-world software solutions.
+
+            My skills include JavaScript, Java, C, C++, and PHP, along with HTML, CSS, Tailwind, React, and Node.js
+            (MERN stack). I am comfortable with databases, backend fundamentals, debugging, Linux/Ubuntu environments,
+            and developing complete web applications from frontend to backend.
+          </p>
+
+          <div class="d-flex flex-column gap-3">
+            <a href="https://github.com/kapilsaklani" class="d-flex align-items-center gap-3 hover-link group">
+              <div class="hover-link-box">
+                <i data-lucide="github" class="text-accent" style="width: 1.25rem; height: 1.25rem;"></i>
+              </div>
+              <span class="font-body fw-semibold">GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/kapilsaklani/"
+              class="d-flex align-items-center gap-3 hover-link group">
+              <div class="hover-link-box">
+                <i data-lucide="linkedin" class="text-accent" style="width: 1.25rem; height: 1.25rem;"></i>
+              </div>
+              <span class="font-body fw-semibold">LinkedIn</span>
+            </a>
+            <a href="#" class="d-flex align-items-center gap-3 hover-link group">
+              <div class="hover-link-box">
+                <i data-lucide="mail" class="text-accent" style="width: 1.25rem; height: 1.25rem;"></i>
+              </div>
+              <span class="font-body fw-semibold">Gmail</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="py-5" id="projects">
+    <div class="container" style="max-width: 72rem;"> <!-- max-w-6xl -->
+      <h2 class="font-display text-foreground mb-5" style="font-size: 2.25rem;">
+        Projects
+      </h2>
+      <div class="row g-4">
+        <!-- Projects Loop -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="project-card">
+            <img src="assets/volunteer_hub.png" alt="VolunteerHub" class="project-image">
+            <div class="project-overlay">
+              <div class="project-info">
+                <span class="badge bg-secondary text-accent fw-normal font-display px-2 py-1 rounded"
+                  style="font-size: 0.75rem;">JavaScript · MERN</span>
+                <h3 class="font-display text-foreground mt-2 mb-2" style="font-size: 1.125rem;">VolunteerHub</h3>
+                <p class="text-muted-foreground font-body mb-3" style="font-size: 0.875rem; line-height: 1.5;">
+                  A bridge connecting passion with purpose. Streamlines finding tailored opportunities and getting
+                  instant, automated recognition.
+                </p>
+                <div class="d-flex gap-3">
+                  <a href="#" class="text-muted-foreground hover-text-primary transition-colors" title="View Code">
+                    <i data-lucide="github" style="width: 1.25rem; height: 1.25rem;"></i>
+                    GitHub
+                  </a>
+                  <a href="#" class="text-muted-foreground hover-text-primary transition-colors" title="Live Demo">
+                    <i data-lucide="external-link" style="width: 1.25rem; height: 1.25rem;"></i>
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="project-card">
+            <img src="assets/game_gpt.png" alt="game-gpt" class="project-image">
+            <div class="project-overlay">
+              <div class="project-info">
+                <span class="badge bg-secondary text-accent fw-normal font-display px-2 py-1 rounded"
+                  style="font-size: 0.75rem;">JavaScript · AI</span>
+                <h3 class="font-display text-foreground mt-2 mb-0" style="font-size: 1.125rem;">game-gpt</h3>
+                <div class="d-flex gap-3 mt-3">
+                  <a href="#" class="text-muted-foreground hover-text-primary transition-colors" title="View Code">
+                    <i data-lucide="github" style="width: 1.25rem; height: 1.25rem;"></i>
+                    GitHub
+                  </a>
+                  <a href="#" class="text-muted-foreground hover-text-primary transition-colors" title="Live Demo">
+                    <i data-lucide="external-link" style="width: 1.25rem; height: 1.25rem;"></i>
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="project-card">
+            <img src="assets/artvibe.png" alt="Artvibe" class="project-image">
+            <div class="project-overlay">
+              <div class="project-info">
+                <span class="badge bg-secondary text-accent fw-normal font-display px-2 py-1 rounded"
+                  style="font-size: 0.75rem;">PHP · Web</span>
+                <h3 class="font-display text-foreground mt-2 mb-0" style="font-size: 1.125rem;">Artvibe</h3>
+                <div class="d-flex gap-3 mt-3">
+                  <a href="#" class="text-muted-foreground hover-text-primary transition-colors" title="View Code">
+                    <i data-lucide="github" style="width: 1.25rem; height: 1.25rem;"></i>
+                    GitHub
+                  </a>
+                  <a href="#" class="text-muted-foreground hover-text-primary transition-colors" title="Live Demo">
+                    <i data-lucide="external-link" style="width: 1.25rem; height: 1.25rem;"></i>
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="project-card">
+            <img src="assets/process_monitoring.png" alt="Real-Time Process Monitoring" class="project-image">
+            <div class="project-overlay">
+              <div class="project-info">
+                <span class="badge bg-secondary text-accent fw-normal font-display px-2 py-1 rounded"
+                  style="font-size: 0.75rem;">HTML · Dashboard</span>
+                <h3 class="font-display text-foreground mt-2 mb-0" style="font-size: 1.125rem;">Real-Time Process
+                  Monitoring</h3>
+                <div class="d-flex gap-3 mt-3">
+                  <a href="#" class="text-muted-foreground hover-text-primary transition-colors" title="View Code">
+                    <i data-lucide="github" style="width: 1.25rem; height: 1.25rem;"></i>
+                    GitHub
+                  </a>
+                  <a href="#" class="text-muted-foreground hover-text-primary transition-colors" title="Live Demo">
+                    <i data-lucide="external-link" style="width: 1.25rem; height: 1.25rem;"></i>
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills & Certifications Section -->
+  <section class="py-5" id="skills">
+    <div class="container" style="max-width: 72rem;">
+
+      <!-- Skills -->
+      <div class="mb-5">
+        <h2 class="font-display text-foreground mb-4 d-flex align-items-center gap-2" style="font-size: 1.5rem;">
+          Skills
+        </h2>
+        <div class="skills-container">
+          <!-- Skill Pills -->
+          <div class="skill-pill">
+            <i data-lucide="code"></i> React
+          </div>
+          <div class="skill-pill">
+            <i data-lucide="terminal"></i> Node.js
+          </div>
+          <div class="skill-pill">
+            <i data-lucide="server"></i> Express
+          </div>
+          <div class="skill-pill">
+            <i data-lucide="database"></i> PostgreSQL
+          </div>
+          <div class="skill-pill">
+            <i data-lucide="database"></i> MongoDB
+          </div>
+          <div class="skill-pill">
+            <i data-lucide="globe"></i> REST APIs
+          </div>
+          <div class="skill-pill">
+            <i data-lucide="code-2"></i> JavaScript
+          </div>
+          <div class="skill-pill">
+            <i data-lucide="coffee"></i> Java
+          </div>
+          <div class="skill-pill">
+            <i data-lucide="terminal"></i> C
+          </div>
+          <div class="skill-pill">
+            <i data-lucide="terminal-square"></i> C++
+          </div>
+          <div class="skill-pill">
+            <i data-lucide="server"></i> PHP
+          </div>
+          <div class="skill-pill">
+            <i data-lucide="palette"></i> Tailwind CSS
+          </div>
+          <div class="skill-pill">
+            <i data-lucide="layout"></i> Bootstrap
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div>
+        <h2 class="font-display text-white mb-4 d-flex align-items-center gap-2" style="font-size: 1.5rem;">
+          Certifications
+        </h2>
+        <div class="row g-4">
+          <div class="col-12 col-md-6">
+            <div class="cert-item">
+              <i data-lucide="award" class="text-accent flex-shrink-0" style="width: 1.5rem; height: 1.5rem;"></i>
+              <div>
+                <h3 class="font-display text-foreground mb-1" style="font-size: 1rem;">MERN Stack with Gen AI</h3>
+                <p class="font-body text-muted-foreground mb-0" style="font-size: 0.875rem;">W3 Grads</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="cert-item">
+              <i data-lucide="shield-check" class="text-accent flex-shrink-0"
+                style="width: 1.5rem; height: 1.5rem;"></i>
+              <div>
+                <h3 class="font-display text-foreground mb-1" style="font-size: 1rem;">Privacy and Security in Social
+                  Media</h3>
+                <p class="font-body text-muted-foreground mb-0" style="font-size: 0.875rem;">NPTEL</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="cert-item">
+              <i data-lucide="layout" class="text-accent flex-shrink-0" style="width: 1.5rem; height: 1.5rem;"></i>
+              <div>
+                <h3 class="font-display text-foreground mb-1" style="font-size: 1rem;">Responsive Web Design</h3>
+                <p class="font-body text-muted-foreground mb-0" style="font-size: 0.875rem;">freeCodeCamp</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="footer-text mb-0">
+        © 2026 Kapil Saklani
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom Scripts -->
+  <script src="js/script.js"></script>
+
+  <!-- Initialize Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+
+</html>
